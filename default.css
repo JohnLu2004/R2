@@ -41,7 +41,7 @@ body {
 .textcontainer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
   height: 350px;
 }
 
