@@ -24,7 +24,7 @@ body {
   background-color: #04AA6D;
 } /* Green */
 
-#analyze-reviews-button {
+.analyze-reviews-button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -34,7 +34,7 @@ body {
   cursor: pointer;
 }
 
-#analyze-reviews-button:hover {
+.analyze-reviews-button:hover {
   background-color: #3e8e41;
 }
 
@@ -68,4 +68,32 @@ textarea {
   box-sizing: border-box;
   border: none;
   resize: none;
+}
+
+.barcontainer {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 460px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.positive {
+  background-color: rgb(139, 252, 139);
+  flex-grow: 1;
+  height: 100%;
+}
+
+.neutral {
+  background-color: rgb(183, 183, 183);
+  flex-grow: 1;
+  height: 100%;
+}
+
+.negative {
+  background-color: rgb(252, 114, 114);
+  flex-grow: 1;
+  height: 100%;
 }
