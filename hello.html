@@ -14,18 +14,14 @@
    <body>
     <p>Company</p>
     <div class="container">
-      <div class="skills percentage">90%</div>
+      <div class="percentage">90%</div>
     </div>
     <h1>CensView</h1>
     <p>This extension compares and analyzes review data of the site you are visiting.</p>
     <p>Please click the "Analyze Reviews" button to start the analysis:</p>
-    <button id="analyze-reviews-button">Analyze Reviews</button>
-    <div id="review-analysis-results"></div>
-    <script>
-      document.getElementById("analyze-reviews-button").addEventListener("click", function() {
-        // Do Something
-      });
-    </script>
+    <button id="analyze-reviews-button" onclick="console.log('hi')">
+      Analyze Reviews
+    </button>
     <div class="textcontainer">
       <div class="box">
         <h3>Pros</h3>
@@ -38,3 +34,12 @@
     </div>
    </body>
 </html>
+
+<script>
+  document.getElementById("analyze-reviews-button").addEventListener("click", function() {
+        // Do Something
+        bar = document.getElementsByClassName('percentage');
+        button.width = '10%'
+        console.log("did something")
+      });
+</script>

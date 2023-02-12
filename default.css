@@ -3,19 +3,6 @@ body {
     height: 500px;
 }
 
-.Background-Blue{
-    padding: 0px;
-    background-image: -webkit-linear-gradient(left, 
-    rgba(15, 23, 252, 0.9) 0%, 
-    /* % tells you how much to darken from the left*/
-    rgba(15, 23, 252,0.6) 20%,
-    /* % tells you how much to darken from the left*/
-    rgba(15, 23, 252,0.6) 80%,
-    rgba(15, 23, 252,0.9) 100%
-    );
-    filter: brightness(100%);
-}
-
 /* Make sure that padding behaves as expected */
 * {box-sizing:border-box}
 
@@ -32,7 +19,7 @@ body {
   color: white; /* White text color */
 }
 
-.percentage {width: 90%; background-color: #04AA6D;} /* Green */
+.percentage {width: 83%; background-color: #04AA6D;} /* Green */
 .css {width: 80%; background-color: #2196F3;} /* Blue */
 .js {width: 65%; background-color: #f44336;} /* Red */
 .php {width: 60%; background-color: #808080;} /* Dark Grey */
