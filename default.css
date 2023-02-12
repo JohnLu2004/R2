@@ -12,7 +12,7 @@ body {
   background-color: #ff0000; /* Grey background */
 }
 
-.skills {
+#skills {
   text-align: right; /* Right-align text */
   padding-top: 10px; /* Add top padding */
   padding-bottom: 10px; /* Add bottom padding */
