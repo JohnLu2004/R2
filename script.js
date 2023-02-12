@@ -7,8 +7,7 @@ if(butt){
         //get info about percentage of peeps that like it
     
         //change values
-        document.getElementById("percent").innerText = "30%";
-        document.getElementById("percent").style.width = "50%";
+        updateValues(data)
     });
 }else{
     console.log("it don't exist");
@@ -25,7 +24,24 @@ async function getInfo() {
     
 
 async function fetchAsync (url) {
-    let response = await fetch(url);
+    const settings = {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        url
+    };
+    console.log(settings.url)
+    let response = await fetch(`http://127.0.0.1:8000/courses/`, settings);
     let data = await response.json();
     return data;
+}
+
+async function updateValues (data) {
+    document.getElementById("prosText").innerText = "50%";
+    document.getElementById("lovers").style.width = "50%";
+
+    document.getElementById("consText").innerText = "50%";
+    document.getElementById("neutrals").style.width = "50%";
 }

@@ -7,10 +7,25 @@ body {
 * {box-sizing:border-box}
 
 /* Container for skill bars */
-.container {
+#haters {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 30px;
   width: 100%; /* Full width */
   background-color: #ff0000; /* Grey background */
 }
+
+#neutrals {
+  height: 30px;
+  width: 66%;
+  background-color: #818181;
+} /* Green */
+
+#lovers {
+  height: 30px;
+  width: 33%;
+  background-color: #11ff00;
+} /* Green */
 
 #skills {
   text-align: right; /* Right-align text */
@@ -18,11 +33,6 @@ body {
   padding-bottom: 10px; /* Add bottom padding */
   color: white; /* White text color */
 }
-
-#percent {
-  width: 0%;
-  background-color: #04AA6D;
-} /* Green */
 
 .analyze-reviews-button {
   padding: 10px 20px;

@@ -5,13 +5,7 @@
     <link rel="stylesheet" href="default.css">
     
   </head>
-
   <body>
-    <div class="container">
-      <div id = "percent" class="percentage">
-        0%
-      </div>
-    </div>
     <h1>CensView</h1>
     
     <p>This extension compares and analyzes review data of the site you are visiting.</p>
@@ -20,10 +14,13 @@
       Click me
     </button>
 
-    <div class="barcontainer">
-      <div class="positive"></div>
-      <div class="neutral"></div>
-      <div class="negative"></div>
+    <div>
+      <div id="haters">
+        <div id = "neutrals">
+          <div id = "lovers">
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="textcontainer">
@@ -37,7 +34,7 @@
       </div>
       <div class="box">
         <h3>Number of Negative Reviews</h3>
-        <textarea id="prosText"></textarea>
+        <textarea id="negText"></textarea>
       </div>
     </div>
     <p>Reviews from Best Buy and Amazon</p>
