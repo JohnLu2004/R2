@@ -18,27 +18,28 @@ async function getInfo() {
      let queryOptions = { active: true, lastFocusedWindow: true };
      // `tab` will either be a `tabs.Tab` instance or `undefined`.
      let [tab] = await chrome.tabs.query(queryOptions);
-     var data = fetchAsync(tab.url);
+     var data = fetchAsync(tab.url.toString());
      return data;
 }
     
 
 async function fetchAsync (url) {
-    const settings = {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        },
-        url
-    };
-    console.log(settings.url)
-    let response = await fetch(`http://127.0.0.1:8000/courses/`, settings);
+    if(url.includes("bestbuy")){
+        //http://127.0.0.1:5000?siteurl=https://www.bestbuy.ca/en-ca/product/sonos-arc-sound-bar-black/14597172&website=bestbuy
+        url = url.toString() + "website=bestbuy"
+    }else if(url.includes("amazon")){
+        //http://127.0.0.1:5000?siteurl=https://www.amazon.ca/dp/B09F1QQZM2&website=amazon
+        url = url.toString() + "website=amazon"
+    }
+    console.log("url:"+url);
+    let response = await fetch(url);
     let data = await response.json();
+    //gonna pass us [pos,neg,neu]
     return data;
 }
 
 async function updateValues (data) {
+    var total = data[0]+data[1]+data[2];
     document.getElementById("prosText").innerText = "50%";
     document.getElementById("lovers").style.width = "50%";
 
